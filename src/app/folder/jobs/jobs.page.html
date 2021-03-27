@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Jobs</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-virtual-scroll [items]="items">
+    <ion-card *virtualItem="let item;">
+      <ion-card-header>
+        <ion-row>
+          <ion-col>
+            <strong class="upper color-blue">
+              <ion-icon name="person-outline"></ion-icon> {{item.name}}
+            </strong>
+          </ion-col>
+          <ion-col>
+            <div style="text-align:right"><small><em>{{item.date}} {{item.time}}</em></small></div>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img [src]="item.img" [alt]="item.name"></ion-img>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button color="light" *ngIf="item.approved" href="tel:+{{item.call}}">
+                <ion-icon name="call" color="dark"></ion-icon>
+              </ion-button>
+              <ion-button color="light">
+                <ion-icon name="heart" color="danger"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <div style="padding-top: 13px;float: right;">
+                <ion-icon name="boat-outline"></ion-icon> <strong class="upper color-blue"> {{ item.adsby }}</strong>
+              </div>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-virtual-scroll>
+
+  <ion-infinite-scroll threshold="25%" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading more data ..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+
+<!-- Tab bar -->
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="schedule" routerLink="/">
+    <ion-icon name="compass-outline"></ion-icon>
+    <ion-label>Dashboard</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/jobs">
+    <ion-icon name="construct-outline"></ion-icon>
+    <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" routerLink="/contact">
+    <ion-icon name="earth-outline"></ion-icon>
+    <ion-label>Contact</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+<!-- Footer without a border -->
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-text class="center">Copyright reserved by w3earth</ion-text>
+  </ion-toolbar>
+</ion-footer> -->

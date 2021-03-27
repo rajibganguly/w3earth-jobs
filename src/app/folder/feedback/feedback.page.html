@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <!-- List of Sliding Items -->
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label><ion-icon name="mail-unread-outline"></ion-icon></ion-label>
+      <ion-text>w3earth@outlook.com</ion-text>
+    </ion-item>
+    <ion-item-options side="start">
+      <ion-item-option>Email</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+  <ion-list *ngFor="let item of items">
+    <ion-item>
+      <a href="http://w3earth.com" target="_blank">
+        <ion-img [src]="item.img"></ion-img>
+      </a>
+    </ion-item>
+  </ion-list>
+  
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://st2.depositphotos.com/1026550/7026/i/950/depositphotos_70260873-stock-photo-planet-earth-from-the-space.jpg"
+      alt="earth" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Want to write any query here:</h2>
+      <h3>w3earth@outlook.com</h3>
+      <p>Hello User, Waiting to listen your feedback</p>      
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-button size="default" color="medium" shape="round" fill="outline" 
+      [routerLink]="['/']">Return</ion-button>
+  </ion-item>
+  
+</ion-content>
+
+
+
+  <!-- Tab bar -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule" routerLink="/">
+      <ion-icon name="compass-outline"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="schedule" routerLink="/jobs">
+      <ion-icon name="construct-outline"></ion-icon>
+      <ion-label>Jobs</ion-label>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/contact">
+      <ion-icon name="earth-outline"></ion-icon>
+      <ion-label>Contact</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+<!-- Footer without a border -->
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-text class="center">Copyright reserved by w3earth</ion-text>
+  </ion-toolbar>
+</ion-footer> -->

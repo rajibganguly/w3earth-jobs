@@ -1,0 +1,7 @@
+{
+  "name": "w3-jobs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

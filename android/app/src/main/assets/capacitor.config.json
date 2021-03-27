@@ -1,0 +1,13 @@
+{
+  "appId": "io.w3earthjobs.starter",
+  "appName": "w3-jobs",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

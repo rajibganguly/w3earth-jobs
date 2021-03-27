@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">w3-jobs</string>
+    <string name="title_activity_main">w3-jobs</string>
+    <string name="package_name">io.w3earthjobs.starter</string>
+    <string name="custom_url_scheme">io.w3earthjobs.starter</string>
+</resources>

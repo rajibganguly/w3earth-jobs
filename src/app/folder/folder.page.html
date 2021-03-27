@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-factor="0.5" pull-min="100" pull-max="200">
+    <ion-refresher-content> -->
+  <ion-card>
+    <ion-card-header><strong class="upper">Welcome to Foreign Jobs Diary</strong></ion-card-header>
+    <ion-card-content>
+      <p>Covid-19 pandamic wiped out 81 milion jobs in 2020 in Asia-Pacific region. IMF managing director predicted a
+        less bad outlook for india in the upcoming World economic.</p>
+
+      <p>IJD - International Jobs Diary, also trying to help to overcome this situation. We are sharing requirement what
+        posted from various agents. We are not done any verification for agents or their requirements or anything. These
+        are only reference perpose, so please verify from yourself before submit any money/ documents.</p>
+
+      <p>IJD - International Jobs Diary, does not ask you to pay any money in exchange for a job. We are not responsible
+        for any fraudulent communication from any side. This is a platform that connects skilled requirements and
+        skilled worker. This is free for all skilled workers.</p>
+
+
+      <ion-button size="default" color="primary" [routerLink]="['/jobs']">
+        <ion-icon name="briefcase-outline"></ion-icon>   <span 
+        style="padding: 0px 11px;top: 2px;position: relative;">Look into Jobs</span>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header><strong class="upper">Lists of Agents / Countries</strong></ion-card-header>
+    <ion-card-content>
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-list class="block">
+            <ion-item *ngFor="let ag of agents">
+              <ion-label>{{ag.agentname}}</ion-label>
+              <ion-text>
+                <ion-icon name="heart" [color]="ag.color"></ion-icon> {{ag.likes}}
+              </ion-text>
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <ion-list class="block">
+            <ion-item *ngFor="let c of countries">
+              <ion-label>{{c.country}}</ion-label>
+              <ion-text>
+                <ion-icon name="eye" [color]="c.color"></ion-icon> {{c.views}} views
+              </ion-text>
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-content>
+  </ion-card>
+  <!-- </ion-refresher-content>
+  </ion-refresher> -->
+
+</ion-content>
+
+
+<!-- Tab bar -->
+<ion-tab-bar slot="bottom" class="ion-no-border">
+  <ion-tab-button routerLink="/">
+    <ion-icon name="compass-outline"></ion-icon>
+    <ion-label>Dashboard</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" routerLink="/jobs">
+    <ion-icon name="construct-outline"></ion-icon>
+    <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" routerLink="/contact">
+    <ion-icon name="earth-outline"></ion-icon>
+    <ion-label>Contact</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+
+<!-- Footer without a border -->
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-text class="center">Copyright reserved by w3earth</ion-text>
+  </ion-toolbar>
+</ion-footer> -->
