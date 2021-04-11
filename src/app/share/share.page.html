@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Share</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="logo-whatsapp" color="success" ></ion-icon> Take screen shot to share </ion-label>
+    </ion-item>
+    <ion-item>
+      <a [href]="link" class="selectable">{{link}}</a>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label position="stacked">Enter Whats App Number whom to share this App</ion-label>
+      <ion-input #phoneN 
+      placeholder="ex. 8888888888" 
+      minlength="10" 
+      maxlength="10"
+      (keypress)="addNumberTo($event)"></ion-input>
+      
+    </ion-item>
+    <a [href]="url" class="custom-button-share" (click)="shareNow()" [ngClass]="[showsShare ? 'true': 'false']">Share</a>
+     -->
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-text>
+              <img src="./../../assets/img/share_qr.jpg" style="width:100%" />
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+    
+  </ion-list>
+  
+
+</ion-content>
+
+
+<!-- Tab bar -->
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="schedule" routerLink="/">
+    <ion-icon name="compass-outline"></ion-icon>
+    <ion-label>Dashboard</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/jobs">
+    <ion-icon name="construct-outline"></ion-icon>
+    <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/share">
+    <ion-icon name="rocket-outline"></ion-icon>
+    <ion-label>Share</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" routerLink="/contact">
+    <ion-icon name="earth-outline"></ion-icon>
+    <ion-label>Contact</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+
+<!-- Footer without a border -->
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-text class="center">Copyright reserved by w3earth</ion-text>
+  </ion-toolbar>
+</ion-footer> -->

@@ -22,7 +22,7 @@
         </ion-row>
       </ion-card-header>
       <ion-card-content>
-        <ion-img [src]="item.img" [alt]="item.name"></ion-img>
+        <ion-img [src]="item.img" [alt]="item.name" (click)="goToDetails(item)"></ion-img>
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -46,7 +46,7 @@
     </ion-card>
   </ion-virtual-scroll>
 
-  <ion-infinite-scroll threshold="25%" (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll threshold="50%" (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading more data ..">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
@@ -62,6 +62,10 @@
   <ion-tab-button routerLink="/jobs">
     <ion-icon name="construct-outline"></ion-icon>
     <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/share">
+    <ion-icon name="rocket-outline"></ion-icon>
+    <ion-label>Share</ion-label>
   </ion-tab-button>
   <ion-tab-button tab="schedule" routerLink="/contact">
     <ion-icon name="earth-outline"></ion-icon>

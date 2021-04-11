@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="jobs">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Jobs Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="gotoCall(callNumber)">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card *ngIf="items !== undefined">
+    <ion-card-header><strong class="upper">{{items['title']}}</strong></ion-card-header>
+    <ion-card-content>
+      <ion-list class="block">
+        <div *ngFor="let ag of article" style="display:block;width:100%">
+          <h2 style="display:block;width:100%;color:brown;">{{ag['articletitle']}}</h2>
+          <ol>
+            <li *ngFor="let c of ag.paragraph">
+              {{c.list}}
+            </li>
+          </ol>
+        </div>
+      </ion-list>
+      <ion-list *ngIf="image1">
+        <div class="profile-image" [ngStyle]="{ 'background-image': 'url(' + image1 + ')'}"></div>
+      </ion-list>
+      <ion-list *ngIf="image2">
+        <div class="profile-image" [ngStyle]="{ 'background-image': 'url(' + image2 + ')'}"></div>
+      </ion-list>
+      <ion-list *ngIf="image3">
+        <div class="profile-image" [ngStyle]="{ 'background-image': 'url(' + image3 + ')'}"></div>
+      </ion-list>
+      <ion-list *ngIf="image4">
+        <div class="profile-image" [ngStyle]="{ 'background-image': 'url(' + image4 + ')'}"></div>
+      </ion-list>
+      <ion-list *ngIf="workfileA">
+        <video controls preload="auto" [src]="workfileA" class="video">
+          Your browser does not support HTML5 video.
+        </video>
+      </ion-list>
+      <ion-list *ngIf="workfileB">
+        <video controls preload="auto" [src]="workfileB" class="video">
+          Your browser does not support HTML5 video.
+        </video>
+      </ion-list>
+    </ion-card-content>
+    <ion-button size="full" color="primary" [routerLink]="['/jobs']">
+      <ion-icon name="briefcase-outline"></ion-icon>   <span 
+      style="padding: 0px 11px;top: 2px;position: relative;">Return into Jobs</span>
+    </ion-button>
+  </ion-card>
+</ion-content>

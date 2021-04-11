@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobs',
@@ -11,7 +12,13 @@ export class JobsPage implements OnInit {
   callnumber = 918806688030;
   page = 0;
   maximumPage = 3;
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private cd: ChangeDetectorRef    
+    ) {
+      
+     }
 
   ngOnInit() {
     this.loadData();
@@ -29,7 +36,6 @@ export class JobsPage implements OnInit {
   }
 
   loadMore(event) {
-    console.log(event);
     this.page++;
     this.loadData(event);
 
@@ -37,5 +43,12 @@ export class JobsPage implements OnInit {
       event.target.disabled = true;
     }
   }
+
+  goToDetails(obj) {
+    this.router.navigate(['jobs/' + obj.id]);
+    this.cd.detectChanges();
+  }
+
+ 
 
 }

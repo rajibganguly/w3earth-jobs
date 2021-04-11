@@ -1,0 +1,31 @@
+.custom-button-share {
+    margin: 0 10px;
+    background: green;
+    color: #fff;
+    width: calc(100%-20px);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*
+    &.false {
+        background:#ccc;
+        pointer-events: none;
+    }
+    */
+}
+ion-content{
+    overflow-scroll: true;
+}
+  
+  .scroll-content {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+  
+.selectable {
+    -webkit-user-select: auto;
+  }

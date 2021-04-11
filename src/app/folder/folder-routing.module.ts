@@ -13,6 +13,14 @@ const routes: Routes = [
     loadChildren: () => import('./jobs/jobs.module').then( m => m.JobsPageModule)
   },
   {
+    path: 'jobs/:id',
+    loadChildren: () => import('./../jobsdetails/jobsdetails.module').then( m => m.JobsdetailsPageModule)
+  },
+  {
+    path: 'share',
+    loadChildren: () => import('./../share/share.module').then( m => m.SharePageModule)
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
   }

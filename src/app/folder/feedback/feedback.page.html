@@ -51,20 +51,24 @@
 
 
   <!-- Tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule" routerLink="/">
-      <ion-icon name="compass-outline"></ion-icon>
-      <ion-label>Dashboard</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="schedule" routerLink="/jobs">
-      <ion-icon name="construct-outline"></ion-icon>
-      <ion-label>Jobs</ion-label>
-    </ion-tab-button>
-    <ion-tab-button routerLink="/contact">
-      <ion-icon name="earth-outline"></ion-icon>
-      <ion-label>Contact</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="schedule" routerLink="/">
+    <ion-icon name="compass-outline"></ion-icon>
+    <ion-label>Dashboard</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/jobs">
+    <ion-icon name="construct-outline"></ion-icon>
+    <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/share">
+    <ion-icon name="rocket-outline"></ion-icon>
+    <ion-label>Share</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="schedule" routerLink="/contact">
+    <ion-icon name="earth-outline"></ion-icon>
+    <ion-label>Contact</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
 
 <!-- Footer without a border -->
 <!-- <ion-footer class="ion-no-border">

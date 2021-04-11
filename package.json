@@ -1,6 +1,6 @@
 {
   "name": "w3-jobs",
-  "version": "1.0.0",
+  "version": "3.1.0",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@capacitor/android": "^2.4.7",
-    "@capacitor/core": "2.4.7",
+    "@capacitor/core": "^2.4.7",
     "@ionic/angular": "^5.5.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -32,7 +32,7 @@
     "@angular/compiler": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
     "@angular/language-service": "~11.2.0",
-    "@capacitor/cli": "2.4.7",
+    "@capacitor/cli": "^2.4.7",
     "@ionic/angular-toolkit": "^3.1.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",

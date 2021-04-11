@@ -13,6 +13,8 @@
   <ion-card>
     <ion-card-header><strong class="upper">Welcome to Foreign Jobs Diary</strong></ion-card-header>
     <ion-card-content>
+      <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2020/03/23130611/ginp-trojan-coronavirus-finder-featured.jpg"
+       alt="corona" />
       <p>Covid-19 pandamic wiped out 81 milion jobs in 2020 in Asia-Pacific region. IMF managing director predicted a
         less bad outlook for india in the upcoming World economic.</p>
 
@@ -25,7 +27,7 @@
         skilled worker. This is free for all skilled workers.</p>
 
 
-      <ion-button size="default" color="primary" [routerLink]="['/jobs']">
+      <ion-button size="full" color="primary" [routerLink]="['/jobs']">
         <ion-icon name="briefcase-outline"></ion-icon>   <span 
         style="padding: 0px 11px;top: 2px;position: relative;">Look into Jobs</span>
       </ion-button>
@@ -33,26 +35,34 @@
   </ion-card>
 
   <ion-card>
-    <ion-card-header><strong class="upper">Lists of Agents / Countries</strong></ion-card-header>
+    <ion-card-header><strong class="upper">Our Audience </strong></ion-card-header>
     <ion-card-content>
       <ion-slides pager="true" [options]="slideOpts">
         <ion-slide>
           <ion-list class="block">
-            <ion-item *ngFor="let ag of agents">
-              <ion-label>{{ag.agentname}}</ion-label>
-              <ion-text>
-                <ion-icon name="heart" [color]="ag.color"></ion-icon> {{ag.likes}}
-              </ion-text>
+            <ion-item>
+             <img src="./../../assets/img/ban01.png" alt="w3earth jobs" />
             </ion-item>
           </ion-list>
         </ion-slide>
         <ion-slide>
           <ion-list class="block">
-            <ion-item *ngFor="let c of countries">
-              <ion-label>{{c.country}}</ion-label>
-              <ion-text>
-                <ion-icon name="eye" [color]="c.color"></ion-icon> {{c.views}} views
-              </ion-text>
+            <ion-item>
+             <img src="./../../assets/img/ban04.png" alt="w3earth jobs" />
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <ion-list class="block">
+            <ion-item>
+             <img src="./../../assets/img/ban02.png" alt="w3earth jobs" />
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <ion-list class="block">
+            <ion-item>
+             <img src="./../../assets/img/ban03.png" alt="w3earth jobs" />
             </ion-item>
           </ion-list>
         </ion-slide>
@@ -66,14 +76,18 @@
 
 
 <!-- Tab bar -->
-<ion-tab-bar slot="bottom" class="ion-no-border">
-  <ion-tab-button routerLink="/">
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="schedule" routerLink="/">
     <ion-icon name="compass-outline"></ion-icon>
     <ion-label>Dashboard</ion-label>
   </ion-tab-button>
-  <ion-tab-button tab="schedule" routerLink="/jobs">
+  <ion-tab-button routerLink="/jobs">
     <ion-icon name="construct-outline"></ion-icon>
     <ion-label>Jobs</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/share">
+    <ion-icon name="rocket-outline"></ion-icon>
+    <ion-label>Share</ion-label>
   </ion-tab-button>
   <ion-tab-button tab="schedule" routerLink="/contact">
     <ion-icon name="earth-outline"></ion-icon>
